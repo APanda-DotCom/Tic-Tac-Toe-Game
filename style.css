@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    background-color: rgb(89, 177, 149);
+    text-align: center;
+}
+
+.container {
+    height: 70vh; /* Fixed typo: should be 'vh' instead of 'hv' */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem; /* Added gap for spacing */
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin; 
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgb(28, 28, 27); /* Fixed typo: removed extra 'rgb' */
+    font-size: 8vmin;
+    background-color: rgb(227, 225, 179);
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: rgb(200, 200, 150); /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+}
+
+.box:active {
+    background-color: rgb(180, 180, 120); /* Change background color when clicked */
+}
+
+.box.disabled {
+    background-color: rgb(227, 225, 179); /* Reset background color for disabled state */
+    cursor: not-allowed;
+}
+
+.heading {
+  margin:1rem ;
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #080807;
+    color: azure;
+    border-radius: 1rem;
+    border: none;
+    margin: 1rem; /* Added margin for spacing */
+    cursor: pointer; /* Added cursor pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: #6A5ACD; /* Change background color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+#new-btn {
+    background-color: #0a0a09; /* Differentiated background color */
+}
+
+#msg {
+    color: rgb(206, 203, 110);
+    font-size: 5vmin;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem; 
+}  
+
+.hide {
+    display: none;
+}
